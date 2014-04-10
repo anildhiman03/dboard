@@ -2,11 +2,11 @@
 /**
  * Plugin Name.
  *
- * @package   Plugin_Name
- * @author    Your Name <email@example.com>
+ * @package   DBoard
+ * @author    Anil Kumar <anilkumar.dhiman1@gmail.com>
  * @license   GPL-2.0+
  * @link      http://example.com
- * @copyright 2014 Your Name or Company Name
+ * @copyright 2014 anil kumar
  */
 
 /**
@@ -16,7 +16,7 @@
  * If you're interested in introducing administrative or dashboard
  * functionality, then refer to `class-plugin-name-admin.php`
  *
- * @TODO: Rename this class to a proper name for your plugin.
+ * DBoard
  *
  * @package DBoard
  * @author  Anil Kumar <anilkumar.dhiman1@gmail.com>

@@ -12,12 +12,12 @@
  * @copyright 2014 Your Name or Company Name
  *
  * @wordpress-plugin
- * Plugin Name:       @TODO
- * Plugin URI:        @TODO
- * Description:       @TODO
+ * Plugin Name:       DBoard
+ * Plugin URI:        DBoard
+ * Description:       DBoard
  * Version:           1.0.0
- * Author:            @TODO
- * Author URI:        @TODO
+ * Author:            Anil Kumar
+ * Author URI:        about.me/anildhiman
  * Text Domain:       plugin-name-locale
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
