@@ -63,7 +63,10 @@ class UserController extends Dbm{
 
     public function UserMenu()
     {
-        return $this->render('logged-user-menu');
-        return $this->render('login-user-menu');
+        if ( ! is_user_logged_in() ) {
+            return $this->render('login-user-menu');
+        } else {
+            return $this->render('logged-user-menu');
+        }
     }
-} 
+}

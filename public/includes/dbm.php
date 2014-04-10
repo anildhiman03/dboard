@@ -20,4 +20,4 @@ class Dbm {
         $renderedView = ob_get_clean();
         return $renderedView;
     }
-} 
+}
