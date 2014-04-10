@@ -305,4 +305,9 @@ class DBoard {
 		// @TODO: Define your filter hook callback here
 	}
 
+    public function dBoardFrontend()
+    {
+        $model = new UserController();
+        $model->action();
+    }
 }
