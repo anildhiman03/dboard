@@ -34,11 +34,7 @@ if ( ! defined( 'WPINC' ) ) {
  * - replace `class-plugin-name.php` with the name of the plugin's class file
  *
  */
-require_once( plugin_dir_path( __FILE__ ) . 'public/class-dboard.php' );
-require_once( plugin_dir_path( __FILE__ ) . 'public/includes/dbm.php' ); # common functions
-require_once( plugin_dir_path( __FILE__ ) . 'public/includes/urls.php' );
-require_once( plugin_dir_path( __FILE__ ) . 'public/includes/class-user-helper.php' ); # helper method for user class
-require_once( plugin_dir_path( __FILE__ ) . 'public/controller/UserController.php' ); #user controller
+require_once( plugin_dir_path( __FILE__ ) . 'includes.php' ); #user controller
 
 /*
  * Register hooks that are fired when the plugin is activated or deactivated.

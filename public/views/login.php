@@ -1,11 +1,16 @@
 <div id="db-login" class="login-page-content">
-    <?php do_action('db_login'); ?>
-    <?php echo $menu; ?>
+    <?php
+    do_action('db_login');
+    echo $menu;
+    if (Dbm::getMsg('dbError')) {
+        echo Dbm::getMsg('dbError');
+    }
+    ?>
     <form name="db-loginform" id="db-loginform" action="<?php echo esc_url( $actionUrl ); ?>" method="post">
 
     <p class="db-login-username">
         <label><?php _e('Username'); ?> </label>
-        <input type="text" name="log" id="id_username" class="input" value="" size="20" />
+        <input type="text" name="log" id="id_username" class="input" value="<?php echo Dbm::getValue('log'); ?>" size="20" />
     </p>
 
     <p class="login-password">

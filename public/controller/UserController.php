@@ -20,6 +20,9 @@ class UserController extends Dbm
             case 'reset_password':
                 echo $this->resetPassword();
                 break;
+            case 'dashboard':
+                echo $this->dashboard();
+                break;
             case 'error':
                 echo $this->error();
                 break;
@@ -42,8 +45,11 @@ class UserController extends Dbm
 
     public function login()
     {
+
         if (isset($_POST['wp-submit'])) {
+            ob_clean();
             $this->loginSubmit();
+            ob_end_flush();
         }
 
         $url = $this->getUrl('login');
@@ -62,6 +68,17 @@ class UserController extends Dbm
         $menu = $this->UserMenu();
         return $this->render(
             'registration',
+            array(
+                'menu' => $menu
+            )
+        );
+    }
+
+    public function dashboard()
+    {
+        $menu = $this->UserMenu();
+        return $this->render(
+            'dashboard',
             array(
                 'menu' => $menu
             )

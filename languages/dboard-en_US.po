@@ -42,3 +42,16 @@ msgstr "Remember Me"
 
 msgid "Login In"
 msgstr "Login In"
+
+#errors message
+msgid "Empty username"
+msgstr "Empty username/email address"
+
+msgid "Invalid User Credentials"
+msgstr "Invalid Login Credentials"
+
+
+#success message
+
+msgid "Welcome to User Dashboard"
+msgstr "Welcome to User Dashboard"
