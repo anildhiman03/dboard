@@ -1,7 +1,8 @@
 <?php
 
-class UserController extends Dbm{
-
+class UserController extends Dbm
+{
+    use UserHelper; # user for the purpose of multiple inheritance;
     public function action()
     {
         $action = isset($_REQUEST['action']) ? $_REQUEST['action'] : '';
@@ -41,11 +42,17 @@ class UserController extends Dbm{
 
     public function login()
     {
+        if (isset($_POST['wp-submit'])) {
+            $this->loginSubmit();
+        }
+
+        $url = $this->getUrl('login');
         $menu = $this->UserMenu();
         return $this->render(
             'login',
             array(
-                'menu' => $menu
+                'menu' => $menu,
+                'actionUrl' => $url
             )
         );
     }

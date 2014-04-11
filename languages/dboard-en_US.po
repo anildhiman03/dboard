@@ -31,4 +31,14 @@ msgstr "Forget Password"
 msgid "User Dashboard"
 msgstr "User Dashboard"
 
+msgid "Username"
+msgstr "Username"
 
+msgid "Password"
+msgstr "Password"
+
+msgid "Remember Me"
+msgstr "Remember Me"
+
+msgid "Login In"
+msgstr "Login In"

@@ -1,1 +1,3 @@
 db_welcome hook for welcome page
+db_login hook for login page
+user of traits
