@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Anil Kumar
- * Date: 4/11/14
- * Time: 11:29 AM
- */
-
 trait UserHelper
 {
     public $error = '';
@@ -38,19 +31,11 @@ trait UserHelper
             Dbm::setErrorMsg($this->error);
             return false;
         } else {
-
             $credentials['user_login'] = $log;
             $credentials['user_password'] = $pwd;
             $credentials['remember'] = $rememberMe;
             $user = wp_signon($credentials);
-            /*if (isset($user->data)) {
-                echo "done";
-                exit;
-            }*/
-            echo $location = Dbm::getUrl('dashboard');
-            exit;
-            //echo "<script> window.location=$location;</script>";
-            //exit;
+            return $user;
         }
     }
 }

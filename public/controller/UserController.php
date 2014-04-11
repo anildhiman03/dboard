@@ -45,11 +45,12 @@ class UserController extends Dbm
 
     public function login()
     {
-
         if (isset($_POST['wp-submit'])) {
-            ob_clean();
-            $this->loginSubmit();
-            ob_end_flush();
+            if ($this->loginSubmit()) {
+                $location = Dbm::getUrl('dashboard');
+                wp_redirect($location);
+                exit;
+            }
         }
 
         $url = $this->getUrl('login');
@@ -93,4 +94,9 @@ class UserController extends Dbm
             return $this->render('logged-user-menu');
         }
     }
+    function app_output_buffer() {
+        ob_start();
+    }
+    
 }
+?>

@@ -311,3 +311,4 @@ class DBoard {
         $model->action();
     }
 }
+?>

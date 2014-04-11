@@ -90,3 +90,4 @@ class Dbm
         return (isset($_POST[$key]) && !empty($_POST[$key])) ? $_POST[$key] : '';
     }
 }
+?>

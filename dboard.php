@@ -80,3 +80,5 @@ if ( is_admin() && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) ) {
 
 }
 add_shortcode( 'dboardfront', array( 'DBoard', 'dBoardFrontend' ) );
+add_action('init', array('UserController','app_output_buffer'));
+?>
