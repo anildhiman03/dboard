@@ -66,11 +66,17 @@ class UserController extends Dbm
 
     public function registration()
     {
+        if (isset($_POST['wp-submit-login'])) {
+            $this->registrationSubmit();
+        }
+
+        $url = $this->getUrl('registration');
         $menu = $this->UserMenu();
         return $this->render(
             'registration',
             array(
-                'menu' => $menu
+                'menu' => $menu,
+                'actionUrl' => $url
             )
         );
     }
@@ -81,7 +87,7 @@ class UserController extends Dbm
         return $this->render(
             'dashboard',
             array(
-                'menu' => $menu
+                    'menu' => $menu
             )
         );
     }
@@ -94,6 +100,7 @@ class UserController extends Dbm
             return $this->render('logged-user-menu');
         }
     }
+
     function app_output_buffer() {
         ob_start();
     }

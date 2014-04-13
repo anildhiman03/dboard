@@ -40,18 +40,60 @@ msgstr "Password"
 msgid "Remember Me"
 msgstr "Remember Me"
 
+msgid "Cancel"
+msgstr "Cancel"
+
+#menu page
 msgid "Login In"
 msgstr "Login In"
+
+msgid "Profile"
+msgstr "Profile"
+
+msgid "Reset Password"
+msgstr "Reset Password"
+
+msgid "Logout"
+msgstr "Logout"
+
+#registraion page
+msgid "Username"
+msgstr "Username"
+
+msgid "E-Mail"
+msgstr "E-Mail"
+
+msgid "Register"
+msgstr "Register"
+
+msgid "Register your Account"
+msgstr "Register your Account"
+
+msgid "A password will be e-mailed to you"
+msgstr "A password will be e-mailed to you"
 
 #errors message
 msgid "Empty username"
 msgstr "Empty username/email address"
 
+msgid "Invalid Username"
+msgstr "Invalid Username"
+
 msgid "Invalid User Credentials"
 msgstr "Invalid Login Credentials"
 
+msgid "Empty E-Mail"
+msgstr "Empty E-Mail"
+
+msgid "Invalid E-mail"
+msgstr "Invalid E-mail"
 
 #success message
-
 msgid "Welcome to User Dashboard"
 msgstr "Welcome to User Dashboard"
+
+msgid "User Registered Successfully"
+msgstr "User Registered Successfully"
+
+msgid "User Registered Successfully. <br/> Password has been mailed to your email address"
+msgstr "User Registered Successfully. <br/> Password has been mailed to your email address"

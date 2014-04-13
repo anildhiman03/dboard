@@ -5,7 +5,6 @@ class Dbm
 
     private function sessionStart()
     {
-
         /*if (session_status() == PHP_SESSION_NONE) {
             ob_start();
             session_start();
@@ -82,12 +81,12 @@ class Dbm
         return self::setMsg($key, $errorMessage);
     }
 
-    public static function getValue($key = null)
+    public static function getValue($key = null, $default = null)
     {
         if ($key == null) {
             return false;
         }
-        return (isset($_POST[$key]) && !empty($_POST[$key])) ? $_POST[$key] : '';
+        return (isset($_POST[$key]) && !empty($_POST[$key])) ? $_POST[$key] : $default;
     }
 }
 ?>
