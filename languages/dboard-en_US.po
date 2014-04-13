@@ -1,5 +1,3 @@
-# Copyright (C) 2013 TODO
-# This file is distributed under the same license as the TODO package.
 msgid ""
 msgstr ""
 "Project-Id-Version: TODO 1.0.0\n"
@@ -72,6 +70,19 @@ msgstr "Register your Account"
 msgid "A password will be e-mailed to you"
 msgstr "A password will be e-mailed to you"
 
+# forget password
+msgid "Forget Password"
+msgstr "Forget Password"
+
+msgid "Retrieve Password"
+msgstr "Retrieve Password"
+
+msgid "Reset Password E-Mail"
+msgstr "Reset Password E-Mail"
+
+msgid "Your new password is:"
+msgstr "Your new password is:"
+
 #errors message
 msgid "Empty username"
 msgstr "Empty username/email address"
@@ -88,6 +99,12 @@ msgstr "Empty E-Mail"
 msgid "Invalid E-mail"
 msgstr "Invalid E-mail"
 
+msgid "E-mail Not Exist"
+msgstr "E-mail Not Exist"
+
+msgid "Unable to send mail. Your new password is:"
+msgstr "Unable to send mail. Your new password is:"
+
 #success message
 msgid "Welcome to User Dashboard"
 msgstr "Welcome to User Dashboard"
@@ -97,3 +114,6 @@ msgstr "User Registered Successfully"
 
 msgid "User Registered Successfully. <br/> Password has been mailed to your email address"
 msgstr "User Registered Successfully. <br/> Password has been mailed to your email address"
+
+msgid "New Password has been mail you successfully."
+msgstr "New Password has been mail you successfully."

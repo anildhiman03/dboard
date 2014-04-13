@@ -14,7 +14,7 @@
         echo Dbm::getMsg('dbSuccess');
     }
     ?>
-    <form action="<?php echo $actionUrl; ?>" method="post">
+    <form action="<?php echo $actionUrl; ?>" name="db-registration" id="db-registration" method="post">
         <p class="db-reg-username">
             <label><?php _e('Username', 'dboard'); ?></label>
             <input type="text" name="user_login" value="<?php echo Dbm::getValue('user_login', __('Username', 'dboard')); ?>" id="user_login" class="input" />
@@ -26,7 +26,7 @@
         <?php do_action('db_registration'); ?>
         <p class="db-reg-submit">
             <input type="submit" name="wp-submit-login" value="<?php _e('Register', 'dboard'); ?>" id="register" />
-            <input type="submit" name="wp-cancel-login" value="<?php _e('Cancel', 'dboard'); ?>" id="Cancel" />
+            <input type="submit" name="wp-cancel" value="<?php _e('Cancel', 'dboard'); ?>" id="Cancel" />
         </p>
         <hr />
         <p class="statement"><?php _e('A password will be e-mailed to you', 'dboard'); ?></p>

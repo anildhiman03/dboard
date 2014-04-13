@@ -1,3 +1,5 @@
 db_welcome hook for welcome page
 db_login hook for login page
+db_forget_password
+db_registration
 user of traits

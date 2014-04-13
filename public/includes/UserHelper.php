@@ -76,7 +76,44 @@ trait UserHelper
         } else {
             return $this->userId;
         }
+    }
 
+    public function forgetPasswordSubmit()
+    {
+        $email = sanitize_text_field($_POST['user_email']);
+        $email = addslashes_gpc($email);
+        if (!isset($email) || empty($email)) {
+            $this->error = __('Empty E-Mail', 'dboard');
+        } elseif (!is_email($email)) {
+            $this->error = __('Invalid E-mail', 'dboard');
+        } elseif (!email_exists($email)) {
+            $this->error = __('E-mail Not Exist', 'dboard');
+        } else {
+            $user = get_user_by( 'email', $email );
+            $user_id = $user->id;
+            $password = wp_generate_password();
+            wp_set_password( $password, $user_id );
+
+            $to = $email;
+            $siteName = get_bloginfo('name');
+            $headers[] = 'From: '.$siteName.' <no@reply.com>';
+            $subject = __('Reset Password E-Mail');
+            $message = __('Your new password is:').$password;
+            $sent = wp_mail( $to, $subject, $message, $headers );
+
+            if ($sent) {
+                $this->error = false;
+                Dbm::setSuccessMsg(__('New Password has been mail you successfully.', 'dboard'));
+            } else {
+                echo $this->error = __('Unable to send mail. Your new password is:').$password;
+            }
+        }
+        if ($this->error) {
+            Dbm::setErrorMsg($this->error);
+            return false;
+        } else {
+            return true;
+        }
     }
 }
 

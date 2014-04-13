@@ -45,6 +45,11 @@ class UserController extends Dbm
 
     public function login()
     {
+        if (isset($_POST['wp-cancel'])) {
+            wp_redirect(WELCOME);
+            exit;
+        }
+
         if (isset($_POST['wp-submit'])) {
             if ($this->loginSubmit()) {
                 $location = Dbm::getUrl('dashboard');
@@ -66,6 +71,12 @@ class UserController extends Dbm
 
     public function registration()
     {
+
+        if (isset($_POST['wp-cancel'])) {
+            wp_redirect(WELCOME);
+            exit;
+        }
+
         if (isset($_POST['wp-submit-login'])) {
             $this->registrationSubmit();
         }
@@ -74,6 +85,28 @@ class UserController extends Dbm
         $menu = $this->UserMenu();
         return $this->render(
             'registration',
+            array(
+                'menu' => $menu,
+                'actionUrl' => $url
+            )
+        );
+    }
+
+    public function forgetPassword()
+    {
+        if (isset($_POST['wp-cancel'])) {
+            wp_redirect(WELCOME);
+            exit;
+        }
+
+        if (isset($_POST['wp-submit-forget-password'])) {
+            $this->forgetPasswordSubmit();
+        }
+
+        $menu = $this->UserMenu();
+        $url = $this->getUrl('forget_password');
+        return $this->render(
+            'forget_password',
             array(
                 'menu' => $menu,
                 'actionUrl' => $url

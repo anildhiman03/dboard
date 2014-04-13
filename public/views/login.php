@@ -30,7 +30,7 @@
     </p>
     <p class="login-submit">
         <input type="submit" name="wp-submit" id="submit" class="button-primary" value="<?php _e('Login In', 'dboard'); ?>" />
-        <input type="reset" value="<?php _e('Reset', 'dboard'); ?>" id="Reset" />
+        <input type="submit" name="wp-cancel" value="<?php _e('Cancel', 'dboard'); ?>" id="Cancel" />
         <!--<input type="hidden" name="redirect_to" value="' . esc_url( $args['redirect'] ) . '" />-->
         </p>
     </form>

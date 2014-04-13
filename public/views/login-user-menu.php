@@ -10,7 +10,7 @@
         </a>
     </li>
     <li>
-        <a href="<?php echo REGISTRATION; ?>" title="<?php _e( 'Forget Password', 'dboard'); ?>">
+        <a href="<?php echo FORGET_PASSWORD; ?>" title="<?php _e( 'Forget Password', 'dboard'); ?>">
             <?php _e( 'Forget Password', 'dboard'); ?>
         </a>
     </li>
